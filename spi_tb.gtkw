@@ -1,0 +1,65 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Mon May 10 00:40:19 2021
+[*]
+[dumpfile] "/media/ELTN/Lucas/Works/fpga-spi/build/teskeslab_tools_spicore_0.0.1/sim-icarus/spi_tb.vcd"
+[dumpfile_mtime] "Mon May 10 00:39:32 2021"
+[dumpfile_size] 1184
+[savefile] "/media/ELTN/Lucas/Works/fpga-spi/spi_tb.gtkw"
+[timestart] 0
+[size] 1920 1031
+[pos] -1 -1
+*-6.637430 450 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] SPITest.
+[sst_width] 200
+[signals_width] 258
+[sst_expanded] 1
+[sst_vpaned_height] 316
+@28
+SPITest.clk
+SPITest.reset
+@200
+-
+@22
+[color] 7
+SPITest.currentBit[3:0]
+@28
+[color] 7
+SPITest.spiIn
+SPITest.spiClk
+[color] 6
+SPITest.spiOut
+@200
+-
+@28
+SPITest.ready
+SPITest.valid
+@22
+[color] 3
+SPITest.readData[7:0]
+SPITest.dataTx[7:0]
+SPITest.testInputData[7:0]
+@23
+[color] 3
+SPITest.dataRx[7:0]
+@200
+-
+-Internal
+@28
+SPITest.spic.start
+[color] 1
+SPITest.spic.spiClk
+[color] 3
+SPITest.spic.spiIn
+SPITest.spic.tmpInput[7:0]
+@22
+SPITest.spic.tmpOutput[7:0]
+@28
+[color] 2
+SPITest.spic.spiOut
+SPITest.spic.isRunning
+SPITest.spic.isDone
+@22
+SPITest.spic.bitCount[3:0]
+[pattern_trace] 1
+[pattern_trace] 0
