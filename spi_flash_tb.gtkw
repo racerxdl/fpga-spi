@@ -1,0 +1,68 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Sun May 23 03:23:36 2021
+[*]
+[dumpfile] "/media/ELTN/Lucas/Works/fpga-spi/build/teskeslab_tools_spiflash_0.0.1/sim-icarus/spi_flash_tb.vcd"
+[dumpfile_mtime] "Sun May 23 03:22:00 2021"
+[dumpfile_size] 2076
+[savefile] "/media/ELTN/Lucas/Works/fpga-spi/spi_flash_tb.gtkw"
+[timestart] 0
+[size] 1920 1031
+[pos] -1 -1
+*-7.000000 188 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] SPIFlashTest.
+[treeopen] SPIFlashTest.flash.
+[sst_width] 200
+[signals_width] 385
+[sst_expanded] 1
+[sst_vpaned_height] 316
+@28
+SPIFlashTest.clk
+SPIFlashTest.reset
+@200
+-
+-SPI Pins
+@28
+SPIFlashTest.spiClk
+SPIFlashTest.spiCs
+SPIFlashTest.spiIn
+SPIFlashTest.spiOut
+@200
+-
+-Flash
+@22
++{Address} SPIFlashTest.address[23:0]
++{Data} SPIFlashTest.data[31:0]
+@28
++{Ready} SPIFlashTest.ready
++{Valid} SPIFlashTest.valid
+@200
+-
+-Internal
+@22
++{Data Bytes Read} SPIFlashTest.flash.dataBytesRead[3:0]
++{Address Bytes Wrote} SPIFlashTest.flash.addrBytesWrote[3:0]
+@4022
+^>1 /media/ELTN/Lucas/Works/fpga-spi/gtkwave/gtkwave_flash_state.py
++{State} SPIFlashTest.flash.state[15:0]
+@22
++{Latched Addr} SPIFlashTest.flash.tmpAddr[23:0]
++{Latched Data} SPIFlashTest.flash.tmpData[31:0]
+SPIFlashTest.currentBit[7:0]
++{Flash Data} SPIFlashTest.readData[63:0]
+@23
++{Expected Return} SPIFlashTest.testInputData[63:0]
+@200
+-
+-SPI Controller
+@22
+SPIFlashTest.flash.spic.dataRx[7:0]
+SPIFlashTest.flash.spic.dataTx[7:0]
+@28
+SPIFlashTest.flash.spic.isDone
+SPIFlashTest.flash.spic.isRunning
+@22
+SPIFlashTest.flash.spic.tmpInput[7:0]
+SPIFlashTest.flash.spic.tmpOutput[7:0]
+[pattern_trace] 1
+[pattern_trace] 0

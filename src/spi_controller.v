@@ -32,7 +32,6 @@ begin
   begin
     dataRx    <= 0;
     isRunning <= 0;
-    tmpOutput <= 0;
     start     <= 0;
   end
   else
@@ -57,11 +56,12 @@ always @(posedge clk)
 begin
   if (reset)
   begin
-    spiOut    <= 0;
+    spiOut    <= 1;
     spiClk    <= 0;
     isDone    <= 1;
     tmpInput  <= 0;
     bitCount  <= 0;
+    tmpOutput <= 0;
   end
   else
   begin
@@ -71,7 +71,7 @@ begin
       tmpInput          <= 0;       // Reset input buffer
       tmpOutput         <= dataTx;  // Latch TX data
       bitCount          <= 0;
-      spiOut            <= dataTx[0];
+      spiOut            <= dataTx[7];
     end
     else
     if (isRunning && !isDone) // Normal operation
@@ -82,12 +82,13 @@ begin
         bitCount    <= bitCount + 1;
         spiClk      <= 0;
         tmpInput[0] <= spiIn;
-        spiOut      <= tmpOutput[0];
+        spiOut      <= tmpOutput[7];
       end
       else        // Shift internal buffers
       begin
         spiClk      <= 1;
-        tmpOutput   <= {1'b0, tmpOutput[7:1]}; // Shift data >>
+        // tmpOutput   <= {1'b0, tmpOutput[7:1]}; // Shift data >>
+        tmpOutput   <= {tmpOutput[6:0], 1'b0}; // Shift data >>
         tmpInput    <= { tmpInput[6:0], 1'b0}; // Shift data <<
       end
     end
